@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:a="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<h:head>
+		<title>Student Form</title>
+	</h:head>
+	<h:body>
+		<h:form>
+			First Name: <h:inputText id="firstName" value="#{student2.firstName}"/>
+			<br/><br/>
+			Last Name: <h:inputText id="lastName" value="#{student2.lastName}"/>
+			<br/><br/>
+			Country : <h:selectOneMenu value="#{student2.country}">
+					  	<f:selectItem itemValue="Brasil" itemLabel="Brazil"/>
+					  	<f:selectItem itemValue="United States" itemLabel="USA"/>
+					  	<f:selectItem itemValue="Alemanha" itemLabel="German"/>
+					  </h:selectOneMenu>
+			<br/><br/>
+			Tipo Aluno: <h:selectOneMenu value="#{student2.tipo}">
+							<f:selectItems value="#{student2.tipoMatricula}"/>
+						</h:selectOneMenu>
+			<br/><br/>
+			Course language: <h:selectOneRadio value="#{student2.language}">
+							 	<f:selectItem itemValue="PHP" itemLabel="PHP"/>
+							 	<f:selectItem itemValue="Java" itemLabel="Java"/>
+							 	<f:selectItem itemValue="Python" itemLabel="Python"/>
+							 </h:selectOneRadio>
+			<br/><br/>
+			Qual sua IDE preferida: <h:selectManyCheckbox value="#{student2.listaIDE}">
+										<f:selectItem itemValue="Eclipse" itemLabel="Eclipse"/>
+										<f:selectItem itemValue="VSCode" itemLabel="VSCode"/>
+										<f:selectItem itemValue="Netbeans" itemLabel="Netbeans"/>
+									</h:selectManyCheckbox>
+			<br/><br/>
+			<h:commandButton value="Submit" action="student_response2"/>
+		</h:form>
+	</h:body>
+
+</html>

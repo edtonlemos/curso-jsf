@@ -1,0 +1,8 @@
+@charset "ISO-8859-1";
+
+.demo-table{
+	border-collapse: collapse;
+	border-bottom: 1px solid gray;
+	font-family: Tahoma, Verdana,Segoe, sans-serif;
+	margin: 5px;
+}
